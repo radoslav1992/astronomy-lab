@@ -28,7 +28,7 @@ npm run preview
 
 Connect this repository, select `main`, use `npm run build`, and publish the `dist` directory. No Worker, database, or runtime bindings are needed.
 
-**Set the build environment variable `SITE_URL` to the actual production origin** (for example, your own HTTPS domain, without a path), then rebuild. Canonicals, Open Graph URLs, the XML sitemap, and robots.txt will all use that origin. No unowned domain is assumed. Without SITE_URL the app still builds, but canonical URLs and the sitemap are omitted. Set `NODE_VERSION` to `22` if the host needs it.
+The production origin is configured as `https://theastronomylab.com` in `astro.config.mjs`. Every build generates canonical URLs, Open Graph URLs, `sitemap-index.xml`, its child sitemap, and the sitemap entry in `robots.txt` using this domain. No `SITE_URL` environment variable is required. If the domain changes, update the Astro configuration and rebuild. Set `NODE_VERSION` to `22` if the host needs it.
 
 The project intentionally does not reuse Geometry Lab or Physics Lab analytics IDs.
 
