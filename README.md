@@ -40,7 +40,7 @@ Planet reference data: https://nssdc.gsfc.nasa.gov/planetary/factsheet/
 
 Image source manifest: `src/lib/images.json`. Original NASA source links, mission credits, processing notes, and the Webb NASA/ESA/CSA/STScI credit are shown on `/about/`. Images are hosted locally as WebP (about 443 kB combined). NASA does not endorse this independent site. Refer to NASA media guidance for reuse; third-party credits remain applicable.
 
-Google Fonts provides DM Sans and Space Grotesk. The image library sends search terms to images-api.nasa.gov and loads images from images-assets.nasa.gov. The educational tools and locally stored planet photos operate without those services. No analytics or advertising scripts are installed.
+Google Fonts provides DM Sans and Space Grotesk. The image library sends search terms to images-api.nasa.gov and loads images from images-assets.nasa.gov. The educational tools and locally stored planet photos operate without those services. Google Analytics (G-JB1EBJHB4W) measures site usage through the shared page layout. No advertising scripts are installed.
 
 ## Verification
 
