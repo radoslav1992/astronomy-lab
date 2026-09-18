@@ -8,8 +8,9 @@ An Astro astronomy learning site with a midnight observatory theme, icy cyan and
 - Ten labs: Keplerian orbits, Moon phases with approximate date estimates, gravity and escape speed, light travel time, stellar color and luminosity, telescope optics, exoplanet transits, parallax, black hole radius, and magnitude comparison.
 - Editable numbers and sliders, presets, playback where relevant, reset, shareable settings, and SVG downloads.
 - Ten field notes, formula and unit reference, contextual FAQs, and 30 practice questions with explanations and topic filters.
-- Static HTML for all 36 pages; accessible native controls, focus states, reduced motion support, and mobile layouts.
+- Static HTML for all 37 pages; accessible native controls, focus states, reduced motion support, and mobile layouts.
 - Search/filter on the lab directory. All calculations and quizzes run locally; no backend or API key required.
+- Live NASA image library at `/library/`: topic searches, paginated results, accessible image dialogs, source metadata, larger previews, and original-file links. Uses the public NASA Image and Video Library API without an API key, with abortable requests, timeouts, session caching, and retry states.
 
 ## Development
 
@@ -39,10 +40,10 @@ Planet reference data: https://nssdc.gsfc.nasa.gov/planetary/factsheet/
 
 Image source manifest: `src/lib/images.json`. Original NASA source links, mission credits, processing notes, and the Webb NASA/ESA/CSA/STScI credit are shown on `/about/`. Images are hosted locally as WebP (about 443 kB combined). NASA does not endorse this independent site. Refer to NASA media guidance for reuse; third-party credits remain applicable.
 
-Google Fonts provides DM Sans and Space Grotesk. The site otherwise needs no external requests to operate. No analytics or advertising scripts are installed.
+Google Fonts provides DM Sans and Space Grotesk. The image library sends search terms to images-api.nasa.gov and loads images from images-assets.nasa.gov. The educational tools and locally stored planet photos operate without those services. No analytics or advertising scripts are installed.
 
 ## Verification
 
-`npm test` checks known physical benchmarks, conservation in the Kepler model, transit geometry, invalid-input handling, and all diagram states at defaults/presets/input extremes. `npm run build` produces 36 pages. `node scripts/check-build.mjs` checks local asset/navigation links, headings, and structured data in the built pages.
+`npm test` checks known physical benchmarks, conservation in the Kepler model, transit geometry, invalid-input handling, and all diagram states at defaults/presets/input extremes. `npm run build` produces 37 pages. `node scripts/check-build.mjs` checks local asset/navigation links, headings, and structured data in the built pages.
 
 Interactive browser QA could not be completed in the authoring environment because its browser blocked the local preview connection. Review desktop and mobile appearance, keyboard operation, playback, clipboard, and SVG downloads on your deployment before release.
