@@ -1,0 +1,4 @@
+---
+import Layout from '../../layouts/Layout.astro';import {labs} from '../../lib/labs.mjs';
+---
+<Layout title="Learn Astronomy — Visual Guides & Explanations" section="Learn"><div class="wrap"><div class="page-intro"><span class="eyebrow">Field notes from the universe</span><h1>Let curiosity<br/>take the lead.</h1><p>Short explanations. A little math. An experiment to make it click.</p></div><div class="lesson-grid">{labs.map((l,i)=><a class="lesson" href={`/learn/${l.id}/`}><small>FIELD NOTE {String(i+1).padStart(2,'0')} / {l.category.toUpperCase()}</small><h2>{l.name} ↗</h2><p>{l.lead} {l.description}</p></a>)}</div></div></Layout>

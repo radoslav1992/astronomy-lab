@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';import LabCard from '../../components/LabCard.astro';import {labs} from '../../lib/labs.mjs';
+---
+<Layout title="Free Astronomy Simulations & Calculators" section="Labs"><div class="wrap"><div class="page-intro"><span class="eyebrow">Mission control</span><h1>Big questions.<br/>Hands-on answers.</h1><p>Ten interactive astronomy tools to make the invisible visible. Pick an experiment and start changing the universe.</p></div><div class="filter-bar"><input type="search" id="search" aria-label="Search astronomy labs" placeholder="Search orbits, stars, telescopes…"/><select id="category" aria-label="Filter by topic"><option value="">Every corner of space</option>{[...new Set(labs.map(l=>l.category))].map(c=><option>{c}</option>)}</select></div><p class="catalog-count" id="count" aria-live="polite">10 experiments to explore</p><div class="lab-grid">{labs.map(lab=><LabCard lab={lab}/>)}</div><p id="empty" hidden>No experiments match that search. Try “Moon” or choose another topic.</p></div></Layout>
+<script>
+const search=document.querySelector('#search') as HTMLInputElement,category=document.querySelector('#category') as HTMLSelectElement;
+function filter(){let count=0;document.querySelectorAll<HTMLElement>('.lab-card').forEach(el=>{const show=el.dataset.search!.includes(search.value.trim().toLowerCase())&&(!category.value||el.dataset.category===category.value);el.hidden=!show;if(show)count++;});document.querySelector('#count')!.textContent=`${count} experiment${count===1?'':'s'} to explore`;(document.querySelector('#empty') as HTMLElement).hidden=count!==0;}search.addEventListener('input',filter);category.addEventListener('change',filter);
+</script>

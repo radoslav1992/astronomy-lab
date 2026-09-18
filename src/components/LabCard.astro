@@ -1,0 +1,4 @@
+---
+const {lab}=Astro.props;
+---
+<a class="lab-card" href={`/labs/${lab.id}/`} data-category={lab.category} data-search={`${lab.name} ${lab.description}`.toLowerCase()}><span class="icon" aria-hidden="true">{lab.icon}</span><span class="category">{lab.category}</span><h3>{lab.name}</h3><p>{lab.description}</p><span class="go">Open experiment <span aria-hidden="true">↗</span></span></a>
