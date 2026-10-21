@@ -44,10 +44,20 @@ SEO: every page has a unique title, description, and canonical URL; inner pages 
 
 Image source manifest: `src/lib/images.json`. Original NASA source links, mission credits, processing notes, and the Webb NASA/ESA/CSA/STScI credit are shown on `/about/`. Images are hosted locally as WebP (about 443 kB combined). NASA does not endorse this independent site. Refer to NASA media guidance for reuse; third-party credits remain applicable.
 
-Google Fonts provides DM Sans and Space Grotesk. The image library sends search terms to images-api.nasa.gov and loads images from images-assets.nasa.gov. The educational tools and locally stored planet photos operate without those services. Google Analytics (G-JB1EBJHB4W) measures site usage through the shared page layout. No advertising scripts are installed.
+Google Fonts provides DM Sans and Space Grotesk. The image library sends search terms to images-api.nasa.gov and loads images from images-assets.nasa.gov. The educational tools and locally stored planet photos operate without those services. Google Analytics (G-JB1EBJHB4W) measures site usage through the shared page layout. Adsterra serves labeled banner and native ads (see Advertising below). `/privacy/` explains analytics, ads, cookies, and opt-outs; keep it current when services change.
+
+## Advertising
+
+Adsterra ad units live in `src/lib/ads.mjs` (unit keys from the Adsterra publisher dashboard, the ad host, and the production domain). `src/components/AdSlot.astro` renders one labeled, space-reserved slot:
+
+- `leaderboard`: 728×90 on screens 800 px and wider, 320×50 on phones. The layout places it above the footer on every page; pass `ads={false}` to `Layout` to omit it (the 404 page does).
+- `rectangle`: 300×250 after the first main content block on lab, field-note, planet, planet-comparison, and formula pages, never inside a lab workspace.
+- `native`: Adsterra native banner near the end of lab, field-note, planet, and planet-comparison pages, before the FAQ. The formula page skips it because it would sit right next to the footer leaderboard.
+
+Detail pages carry at most three slots; hubs, the home page, the library, practice, about, and privacy carry only the leaderboard. No popunders, social bars, smartlinks, interstitials, or sticky ads are used. Slots load lazily (300 px before they scroll into view) and only on `theastronomylab.com`, so local and preview builds never request ads. Banner snippets share Adsterra’s global `atOptions`, so the loader injects them strictly one after another.
 
 ## Verification
 
-`npm test` checks known physical benchmarks, conservation in the Kepler model, transit geometry, invalid-input handling, and all diagram states at defaults/presets/input extremes. `npm run build` produces 38 pages. `node scripts/check-build.mjs` checks local asset/navigation links, headings, and structured data in the built pages.
+`npm test` checks known physical benchmarks, conservation in the Kepler model, transit geometry, invalid-input handling, and all diagram states at defaults/presets/input extremes. `npm run build` produces 39 pages. `node scripts/check-build.mjs` checks local asset/navigation links, headings, and structured data in the built pages. `tests/ads.test.mjs` checks the ad unit keys and that the ad domain matches the production site.
 
 Interactive browser QA could not be completed in the authoring environment because its browser blocked the local preview connection. Review desktop and mobile appearance, keyboard operation, playback, clipboard, and SVG downloads on your deployment before release.
