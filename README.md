@@ -52,7 +52,7 @@ Adsterra ad units live in `src/lib/ads.mjs` (unit keys from the Adsterra publish
 
 - `leaderboard`: 728×90 on screens 800 px and wider, 320×50 on phones. The layout places it above the footer on every page; pass `ads={false}` to `Layout` to omit it (the 404 page does).
 - `rectangle`: 300×250 after the first main content block on lab, field-note, planet, planet-comparison, and formula pages, never inside a lab workspace.
-- `native`: Adsterra native banner near the end of those detail pages, before the FAQ.
+- `native`: Adsterra native banner near the end of lab, field-note, planet, and planet-comparison pages, before the FAQ. The formula page skips it because it would sit right next to the footer leaderboard.
 
 Detail pages carry at most three slots; hubs, the home page, the library, practice, about, and privacy carry only the leaderboard. No popunders, social bars, smartlinks, interstitials, or sticky ads are used. Slots load lazily (300 px before they scroll into view) and only on `theastronomylab.com`, so local and preview builds never request ads. Banner snippets share Adsterra’s global `atOptions`, so the loader injects them strictly one after another.
 
