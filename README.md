@@ -38,7 +38,7 @@ The project intentionally does not reuse Geometry Lab or Physics Lab analytics I
 
 Numerical models are in `src/lib/science.mjs`, diagrams in `src/lib/render.mjs`, and model explanations and bounds in `src/lib/labs.mjs`. The site documents simplifications next to each lab. It is not a live sky map or precision observing service. Moon dates use a mean synodic cycle. Transit models include circular-disk overlap but no limb darkening. Planet table diameters are equatorial; the gravity tool uses mean Earth radius.
 
-Planet reference data: https://nssdc.gsfc.nasa.gov/planetary/factsheet/ (values and units documented in `src/lib/planets.mjs`). Distances from Earth follow NASA’s perihelion/aphelion convention; moon counts are NASA’s 2025 totals and should be refreshed as new moons are confirmed.
+Planet reference data: https://nssdc.gsfc.nasa.gov/planetary/factsheet/ (values and units documented in `src/lib/planets.mjs`). Distances from Earth follow NASA’s perihelion/aphelion convention; moon counts include discoveries announced through 2025 (Uranus 29 counts S/2025 U1) and should be refreshed as new moons are confirmed.
 
 SEO: every page has a unique title, description, and canonical URL; inner pages emit BreadcrumbList JSON-LD, the homepage emits WebSite JSON-LD, and pages with visible FAQs emit FAQPage JSON-LD. Lab and field-note titles and descriptions live in `src/lib/labs.mjs` (`title`, `summary`, `learnTitle`, `learnSummary`).
 
