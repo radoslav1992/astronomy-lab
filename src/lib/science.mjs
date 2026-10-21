@@ -7,9 +7,11 @@ export function moonAge(date){const stamp=new Date(date).getTime();if(!Number.is
 export function gravity(mass,radius,bodyMass=1){positive(mass);positive(radius);positive(bodyMass);const g=G*mass*5.9722e24/(radius*6371000)**2;return {g,weight:g*bodyMass,escape:Math.sqrt(2*g*radius*6371000)/1000};}
 export function light(distance,unit='au'){positive(distance);const factors={au:AU,km:1,ly:C*YEAR,pc:C*YEAR*3.261563777};if(!(unit in factors))throw new Error('Unknown unit.');const km=distance*factors[unit];return {km,seconds:km/C,years:km/C/YEAR,au:km/AU};}
 export function star(temp,radius){positive(temp);positive(radius);return {peak:2.897771955e6/temp,luminosity:radius**2*(temp/5772)**4,color:temp<4000?'#ffac78':temp<5500?'#ffd3a3':temp<7500?'#fff2d5':temp<12000?'#c6e4ff':'#91baff'};}
-export function telescope(focal,eyepiece,aperture,field){[focal,eyepiece,aperture,field].forEach(n=>positive(n));const power=focal/eyepiece;return {power,exit:aperture/power,field:field/power,resolution:116/aperture};}
+export function telescope(focal,eyepiece,aperture,field){[focal,eyepiece,aperture,field].forEach(n=>positive(n));const power=focal/eyepiece;return {power,exit:aperture/power,field:field/power,resolution:116/aperture,ratio:focal/aperture,maxPower:2*aperture,grasp:(aperture/7)**2};}
 export function transit(planetRadius,starRadius,impact){positive(planetRadius);positive(starRadius);if(!Number.isFinite(impact)||impact<0)throw new Error('Impact must be nonnegative.');const k=planetRadius*6371/(starRadius*SOLAR_RADIUS);return {ratio:k,depth:overlap(1,k,impact)/Math.PI*100};}
 export function overlap(R,r,d){if(d>=R+r)return 0;if(d<=Math.abs(R-r))return Math.PI*Math.min(R,r)**2;return R*R*Math.acos((d*d+R*R-r*r)/(2*d*R))+r*r*Math.acos((d*d+r*r-R*R)/(2*d*r))-.5*Math.sqrt((-d+R+r)*(d+R-r)*(d-R+r)*(d+R+r));}
 export function parallax(p){positive(p);return {parsecs:1/p,lightyears:3.261563777/p};}
 export function blackhole(m){positive(m);return {radius:2*G*SOLAR_MASS*m/(C*1000)**2/1000};}
 export function magnitude(m1,m2){if(!Number.isFinite(m1)||!Number.isFinite(m2))throw new Error('Magnitudes must be finite.');return {ratio:10**(.4*(m2-m1))};}
+// Readable length for anything from millimeter horizons to supermassive black holes.
+export function length(km){positive(km,'Length');return km>=1e9?`${fmt(km/1e9,1)} billion km (${fmt(km/AU,0)} AU)`:km>=1e6?`${fmt(km/1e6,1)} million km (${fmt(km/AU,3)} AU)`:km>=1?`${fmt(km,2)} km`:km>=1e-3?`${fmt(km*1e3,2)} m`:`${fmt(km*1e6,2)} mm`;}

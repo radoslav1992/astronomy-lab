@@ -1,0 +1,5 @@
+---
+import {render} from '../lib/render.mjs';
+const {lab}=Astro.props;const defaults=Object.fromEntries(lab.fields.map(f=>[f.id,f.value]));const rows=lab.presets.map(([name,values])=>[name,render(lab.id,{...defaults,...values}).metrics]);const heads=rows[0][1].map(([label])=>label);
+---
+<section class="reference"><h2>Key formulas</h2><div class="table-wrap"><table class="facts-table"><thead><tr><th scope="col">Quantity</th><th scope="col">Formula</th><th scope="col">Note or example</th></tr></thead><tbody>{lab.formulas.map(([name,expr,note])=><tr><th scope="row">{name}</th><td class="formula-cell">{expr}</td><td>{note}</td></tr>)}</tbody></table></div><h2>Worked examples</h2><p>Each row uses one of this lab’s presets and the same model as the interactive tool.</p><div class="table-wrap"><table><thead><tr><th scope="col">Example</th>{heads.map(h=><th scope="col">{h}</th>)}</tr></thead><tbody>{rows.map(([name,metrics])=><tr><th scope="row">{name}</th>{metrics.map(([,value])=><td>{value}</td>)}</tr>)}</tbody></table></div></section>
