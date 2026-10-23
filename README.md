@@ -10,7 +10,9 @@ An Astro astronomy learning site with a midnight observatory theme, icy cyan and
 - Schwarzschild radius calculator (solar, Jupiter, Earth masses or kilograms) on the black hole field note.
 - Editable numbers and sliders, presets, playback where relevant, reset, shareable settings, and SVG downloads.
 - Ten field notes, formula and unit reference, contextual FAQs, and 30 practice questions with explanations and topic filters.
-- Static HTML for all 38 pages; accessible native controls, focus states, reduced motion support, and mobile layouts.
+- Classroom kit: a teacher hub at `/teachers/`, a printable one-page student activity for every lab at `/labs/<lab>/activity/`, and teacher answer keys at `/teachers/answers/<lab>/` (noindex, out of the sitemap, no ads). Activity content lives in `src/lib/activities.mjs`; answer-key tables are filled from each lab’s own readouts, and `tests/activities.test.mjs` checks every number printed in an answer against `science.mjs`. NGSS connections are listed only where a lab clearly fits.
+- Share to Google Classroom links (`src/components/ClassroomShare.astro`) on labs, field notes, activities and the teacher hub. They are plain links to `classroom.google.com/share?url=…` with `?classroom=1` added to the shared URL; canonical tags stay clean.
+- Static HTML for all 60 pages; accessible native controls, focus states, reduced motion support, and mobile layouts.
 - Search/filter on the lab directory. All calculations and quizzes run locally; no backend or API key required.
 - Live NASA image library at `/library/`: topic searches, paginated results, accessible image dialogs, source metadata, larger previews, and original-file links. Uses the public NASA Image and Video Library API without an API key, with abortable requests, timeouts, session caching, and retry states.
 
@@ -56,8 +58,10 @@ Adsterra ad units live in `src/lib/ads.mjs` (unit keys from the Adsterra publish
 
 Detail pages carry at most three slots; hubs, the home page, the library, practice, about, and privacy carry only the leaderboard. No popunders, social bars, smartlinks, interstitials, or sticky ads are used. Slots load lazily (300 px before they scroll into view) and only on `theastronomylab.com`, so local and preview builds never request ads. Banner snippets share Adsterra’s global `atOptions`, so the loader injects them strictly one after another.
 
+Classroom ad-free rule: `src/components/AdFree.astro` runs first in `<head>`. When a visitor arrives from Google Classroom, Canvas (`*.instructure.com`) or Schoology, or on a URL carrying `?classroom` (added by the Share to Google Classroom links), it adds `ad-free` to `<html>` and stores `adFreeUntil` in local storage for 30 days. `AdSlot` then loads no ad code and hides every slot. The teacher hub and answer keys pass `ads={false}`, so they never show ads.
+
 ## Verification
 
-`npm test` checks known physical benchmarks, conservation in the Kepler model, transit geometry, invalid-input handling, and all diagram states at defaults/presets/input extremes. `npm run build` produces 39 pages. `node scripts/check-build.mjs` checks local asset/navigation links, headings, and structured data in the built pages. `tests/ads.test.mjs` checks the ad unit keys and that the ad domain matches the production site.
+`npm test` checks known physical benchmarks, conservation in the Kepler model, transit geometry, invalid-input handling, and all diagram states at defaults/presets/input extremes. `npm run build` produces 60 pages. `node scripts/check-build.mjs` checks local asset/navigation links, headings, and structured data in the built pages, and that answer keys are noindex, ad-free and absent from the sitemap. `tests/ads.test.mjs` checks the ad unit keys and that the ad domain matches the production site.
 
 Interactive browser QA could not be completed in the authoring environment because its browser blocked the local preview connection. Review desktop and mobile appearance, keyboard operation, playback, clipboard, and SVG downloads on your deployment before release.

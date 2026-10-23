@@ -26,10 +26,12 @@ function fill(slot:HTMLElement){
     box.append(options,script);
   }));
 }
-const live=location.hostname===ads.domain||location.hostname===`www.${ads.domain}`;
+// Visitors from a school platform get no ads (see AdFree.astro).
+const live=(location.hostname===ads.domain||location.hostname===`www.${ads.domain}`)&&!document.documentElement.classList.contains('ad-free');
 const slots=document.querySelectorAll<HTMLElement>('.ad-slot');
 if(live&&'IntersectionObserver' in window){
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;observer.unobserve(entry.target);fill(entry.target as HTMLElement);}),{rootMargin:'300px 0px'});
   slots.forEach(slot=>observer.observe(slot));
 }else if(live)slots.forEach(fill);
 </script>
+<style>:global(.ad-free) .ad-slot{display:none;}</style>

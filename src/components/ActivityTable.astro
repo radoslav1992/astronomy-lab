@@ -1,0 +1,7 @@
+---
+// The worksheet's record table: blank for students, filled from the lab's own readouts in the answer key.
+import {render} from '../lib/render.mjs';
+const {act,lab,answers=false}=Astro.props;const defaults=Object.fromEntries(lab.fields.map(f=>[f.id,f.value]));
+const rows=act.table.rows.map(([label,{unit,...values}])=>[label,answers?Object.fromEntries(render(lab.id,{...defaults,...values},unit).metrics):{}]);
+---
+<div class="table-wrap record-wrap"><table class="record-table"><thead><tr><th scope="col">Setting</th>{act.table.record.map(h=><th scope="col">{h}</th>)}</tr></thead><tbody>{rows.map(([label,values])=><tr><th scope="row">{label}</th>{act.table.record.map(h=><td>{values[h]??''}</td>)}</tr>)}{act.table.extra&&<tr><th scope="row">{act.table.extra}</th>{act.table.record.map(()=><td>{answers?'Answers vary':''}</td>)}</tr>}</tbody></table></div>
