@@ -5,6 +5,7 @@ export default defineConfig({
   site: 'https://theastronomylab.com',
   output: 'static',
   trailingSlash: 'always',
-  integrations: [sitemap({filter: page => !/\/404(?:\/|\.html)?$/.test(page)})],
+  // Teacher answer keys are noindex and stay out of the sitemap.
+  integrations: [sitemap({filter: page => !/\/404(?:\/|\.html)?$/.test(page) && !page.includes('/teachers/answers/')})],
   vite: {server: {allowedHosts: ['terminal.local']}},
 });
