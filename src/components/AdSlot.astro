@@ -29,9 +29,17 @@ function fill(slot:HTMLElement){
 // Visitors from a school platform get no ads (see AdFree.astro).
 const live=(location.hostname===ads.domain||location.hostname===`www.${ads.domain}`)&&!document.documentElement.classList.contains('ad-free');
 const slots=document.querySelectorAll<HTMLElement>('.ad-slot');
-if(live&&'IntersectionObserver' in window){
-  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;observer.unobserve(entry.target);fill(entry.target as HTMLElement);}),{rootMargin:'300px 0px'});
-  slots.forEach(slot=>observer.observe(slot));
-}else if(live)slots.forEach(fill);
+let started=false;
+function start(){
+  if(started)return;started=true;
+  if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;observer.unobserve(entry.target);fill(entry.target as HTMLElement);}),{rootMargin:'300px 0px'});
+    slots.forEach(slot=>observer.observe(slot));
+  }else slots.forEach(fill);
+}
+// In consent regions ads wait for Accept (see ConsentDefaults.astro / ConsentBanner.astro).
+const consent=document.documentElement.classList;
+if(live&&!consent.contains('consent-pending')&&!consent.contains('consent-denied'))start();
+else if(live)addEventListener('consentchange',event=>{if((event as CustomEvent).detail==='granted')start();});
 </script>
-<style>:global(.ad-free) .ad-slot{display:none;}</style>
+<style>:global(.ad-free) .ad-slot,:global(.consent-pending) .ad-slot,:global(.consent-denied) .ad-slot{display:none;}</style>
