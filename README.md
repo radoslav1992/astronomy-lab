@@ -69,3 +69,16 @@ Cookie consent: `src/components/ConsentDefaults.astro` runs first in `<head>` an
 `npm test` checks known physical benchmarks, conservation in the Kepler model, transit geometry, invalid-input handling, and all diagram states at defaults/presets/input extremes. `npm run build` produces 60 pages. `node scripts/check-build.mjs` checks local asset/navigation links, headings, and structured data in the built pages, and that answer keys are noindex, ad-free and absent from the sitemap. `tests/ads.test.mjs` checks the ad unit keys and that the ad domain matches the production site.
 
 Interactive browser QA could not be completed in the authoring environment because its browser blocked the local preview connection. Review desktop and mobile appearance, keyboard operation, playback, clipboard, and SVG downloads on your deployment before release.
+
+## llms.txt
+
+`public/llms.txt` is a plain-text guide to the site for AI assistants (see llmstxt.org): one line per page with
+its title and description. ChatGPT is one of the site's main sources of visitors, and it can only recommend a
+tool it can read about. The file is generated from the built pages, so regenerate it after changing a title or
+description, or adding a page:
+
+```sh
+npm run build && npm run llms
+```
+
+`tests/llms.test.mjs` fails if a lab is missing from the file.
