@@ -1,0 +1,18 @@
+---
+// Quick answers for the light travel lab. Every figure is computed from science.mjs and the planet table;
+// stellar distances are rounded published values and are labeled as approximate.
+import {light,travel,duration,C,AU,YEAR,VOYAGER_1} from '../lib/science.mjs';import {planets,byId,planetFacts,num,sci} from '../lib/planets.mjs';import {labs} from '../lib/labs.mjs';
+const sig=(n:number)=>n>=1000?num(n):n.toLocaleString('en-US',{maximumSignificantDigits:3});
+const big=(km:number)=>km>=1e12?`${num(km/1e12,2)} trillion km`:km>=1e9?`${num(km/1e9,2)} billion km`:km>=1e6?`${num(km/1e6,2)} million km`:`${num(km)} km`;
+const lightYear=C*YEAR,voyager=travel(1,'ly',VOYAGER_1);
+const stars:[number,string?][]=[[1],[4.24,'Proxima Centauri'],[10],[12],[40,'TRAPPIST-1, approx.'],[49],[63],[100],[124,'K2-18 b, approx.'],[500],[1400]];
+const moonAu=labs.find(l=>l.id==='light-travel')!.presets[1][1].distance,earth=byId('earth');
+const near=[['Once around Earth’s equator',null,planetFacts(earth).circumference],['Earth to the Moon (average)',null,light(moonAu).km],...planets.map(p=>[`Sun to ${p.name}`,p.id,p.distance*1e6])] as [string,string|null,number][];
+const units=[['Light-second',1],['Light-minute',60],['Light-hour',3600],['Light-day',86400],['Light-year',YEAR]] as [string,number][];
+---
+<section class="reference" id="quick-answers"><h2>How long does it take to travel a light-year?</h2><p>A light-year is a distance, not a time: about {big(lightYear)} ({num(lightYear/AU)} AU), the distance light covers in one year. So light needs one year for every light-year: 12 years for 12 light-years, 500 years for 500. Anything slower takes longer. Voyager 1, leaving the solar system at about {VOYAGER_1} km/s, would need roughly {duration(voyager.seconds)} to cover one light-year. Select a distance to load it into the calculator.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Distance</th><th scope="col">Light takes</th><th scope="col">Distance in km</th><th scope="col">At Voyager 1’s speed ({VOYAGER_1} km/s)</th></tr></thead><tbody>{stars.map(([ly,note])=><tr><th scope="row"><a href={`/labs/light-travel/?distance=${ly}&unit=ly`}>{num(ly,2)} light-year{ly===1?'':'s'}</a>{note&&<small> ({note})</small>}</th><td>{duration(light(ly,'ly').seconds)}</td><td>{sci(light(ly,'ly').km)} km</td><td>about {duration(travel(ly,'ly',VOYAGER_1).seconds)}</td></tr>)}</tbody></table></div>
+<p class="worked">For any other distance, the light travel time in years equals the number of light-years, and the distance in kilometers is the number of light-years × {sci(lightYear,4)}. Years are Julian years of 365.25 days.</p>
+<h2>How long does light take to cross the solar system?</h2><p>Inside the solar system, light travel times are seconds, minutes or hours. Planet distances are averages from the Sun.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Journey</th><th scope="col">Distance</th><th scope="col">Light takes</th></tr></thead><tbody>{near.map(([name,id,km])=><tr><th scope="row">{id?<a href={`/planets/${id}/`}>{name}</a>:name}</th><td>{big(Number(km.toPrecision(4)))}{id&&` (${num(km/AU,2)} AU)`}</td><td>{duration(light(km,'km').seconds)}</td></tr>)}</tbody></table></div>
+<h3>How far is a light-second, a light-hour or a light-day?</h3><div class="table-wrap"><table><thead><tr><th scope="col">Unit</th><th scope="col">Distance light travels</th><th scope="col">In AU</th></tr></thead><tbody>{units.map(([name,seconds])=><tr><th scope="row">{name}</th><td>{big(C*seconds)}</td><td>{sig(C*seconds/AU)}</td></tr>)}</tbody></table></div></section>
