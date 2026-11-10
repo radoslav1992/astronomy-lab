@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import {learningApps,currentApp} from '../lib/learning-apps.mjs';import AdSlot from '../components/AdSlot.astro';import AdFree from '../components/AdFree.astro';import ConsentDefaults from '../components/ConsentDefaults.astro';import ConsentBanner from '../components/ConsentBanner.astro';
 const sisterApps=learningApps.filter(app=>app.id!==currentApp&&app.url);
-const {title='The Astronomy Lab: Free Astronomy Simulations & Calculators',description='The Astronomy Lab: free interactive astronomy simulations, calculators and planet facts — orbits, Moon phases, telescopes, black holes and more. No sign-up.',section='Explore',crumbs=[],ads=true,noindex=false}=Astro.props;
+const {title='The Astronomy Lab: Free Astronomy Simulations & Virtual Labs',description='Free astronomy simulations, virtual labs and calculators for students and teachers: orbits, Moon phases, telescopes, black holes, planet facts. No sign-up.',section='Explore',crumbs=[],ads=true,noindex=false}=Astro.props;
 const canonical=Astro.site?new URL(Astro.url.pathname,Astro.site):null;
 const fullTitle=title.includes('Astronomy Lab')?title:`${title} | Astronomy Lab`;
 // crumbs: [[name, path?], ...] after Home; the last crumb is the current page.
