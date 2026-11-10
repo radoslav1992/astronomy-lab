@@ -1,0 +1,71 @@
+# Astronomy Lab
+
+> Free astronomy simulations, virtual labs and calculators for students and teachers. Each lab is a working model that runs in the browser, paired with a short lesson, a printable classroom activity and a teacher answer key. No sign-up. From the makers of Interactive Periodic Table.
+
+## Tools
+
+- [Astronomy Simulations, Virtual Labs & Calculators](https://theastronomylab.com/labs/): Ten free astronomy simulations, virtual labs and calculators: orbit simulator, Moon phases, telescope calculator, exoplanet transits, parallax and more.
+- [Black Hole Event Horizon Simulator](https://theastronomylab.com/labs/black-hole-radius/): Explore a black hole’s event horizon: set a mass and see its Schwarzschild radius and diameter. A 10-solar-mass black hole is about 59 km across.
+- [Exoplanet Transit Simulator & Depth Calculator](https://theastronomylab.com/labs/exoplanet-transit/): Free exoplanet transit simulator: watch a planet cross its star and read the dip in the light curve. Transit depth ≈ (Rp/R★)²: about 1% for Jupiter.
+- [Planetary Gravity & Escape Velocity Calculator](https://theastronomylab.com/labs/gravity-calculator/): Calculate surface gravity, your weight and escape velocity on any world from its mass and radius. Earth: 9.8 m/s² and 11.2 km/s; Mars: 3.7 m/s². With formulas.
+- [Light-Years to Years: Light Travel Time Calculator](https://theastronomylab.com/labs/light-travel/): How long does light take to travel 4, 12 or 500 light-years? Convert light-years, AU or km to light travel time. Sunlight reaches Earth in 8 min 19 s.
+- [Stellar Magnitude & Brightness Calculator](https://theastronomylab.com/labs/magnitude-comparison/): Compare two stars on the magnitude scale: 5 magnitudes is exactly 100× in brightness and 1 magnitude about 2.512×. Enter magnitudes to get the flux ratio.
+- [Moon Phases Simulation: Interactive Lunar Cycle](https://theastronomylab.com/labs/moon-phases/): Interactive Moon phases simulation: slide through the 29.5-day lunar cycle or pick a date to see the phase, illumination and why the Moon changes shape.
+- [Orbit Simulator: Planetary Orbits & Kepler’s Laws](https://theastronomylab.com/labs/orbit-simulator/): Free online orbit simulator: set a planet’s distance, eccentricity and star mass, press play and watch Kepler’s laws. Period and speed update live.
+- [Star Color & Luminosity Calculator](https://theastronomylab.com/labs/star-lab/): See how a star’s temperature and size set its color, peak wavelength (Wien’s law) and luminosity (Stefan–Boltzmann law). The Sun: 5,772 K, peak near 502 nm.
+- [Stellar Parallax Calculator & Diagram](https://theastronomylab.com/labs/stellar-parallax/): What is stellar parallax? Convert a parallax angle to distance with d = 1/p: 0.1″ → 10 parsecs (32.6 light-years). Interactive diagram and worked examples.
+- [Telescope Calculator: Magnification & Exit Pupil](https://theastronomylab.com/labs/telescope-calculator/): Free telescope eyepiece calculator: enter focal lengths and aperture to get magnification, exit pupil, true field of view, Dawes’ limit and focal ratio.
+
+## Lessons
+
+- [Learn Astronomy — Visual Guides & Explanations](https://theastronomylab.com/learn/): Short, visual astronomy guides: Kepler’s laws, Moon phases, gravity, light travel, star color, telescopes, exoplanet transits, parallax, black holes and magnitudes.
+- [Schwarzschild Radius Calculator & Formula](https://theastronomylab.com/learn/black-hole-radius/): The Schwarzschild radius rₛ = 2GM/c² is the size of a black hole’s event horizon. Calculate it for any mass: Sun 2.95 km, Jupiter 2.82 m, Earth 8.87 mm.
+- [Transit Depth Formula & Exoplanet Transits](https://theastronomylab.com/learn/exoplanet-transit/): The transit method finds exoplanets from tiny dips in starlight. Learn the transit depth formula δ ≈ (Rp/R★)², with Jupiter- and Earth-sized examples.
+- [How to Calculate Gravity on Another Planet](https://theastronomylab.com/learn/gravity-calculator/): Surface gravity g = GM/R² explained, plus weight and escape velocity. Worked examples for Earth, the Moon and Mars, and why gas giants have no surface.
+- [How Long Does Light Take to Travel in Space?](https://theastronomylab.com/learn/light-travel/): Light takes 8 min 19 s from the Sun, 1.3 s from the Moon and over 4 years from the nearest star. Learn t = d/c, the light-year and why we see the past.
+- [The Magnitude Scale Explained: Star Brightness](https://theastronomylab.com/learn/magnitude-comparison/): Why do brighter stars have smaller magnitudes? Learn the logarithmic magnitude scale, the 100× rule for 5 magnitudes and how to compare brightness.
+- [Moon Phases Explained: The 8 Lunar Phases](https://theastronomylab.com/learn/moon-phases/): Why does the Moon have phases? Learn the 8 lunar phases, the 29.5-day synodic month and why phases are not caused by Earth’s shadow — with a diagram.
+- [Kepler’s Third Law Explained (P² = a³)](https://theastronomylab.com/learn/orbit-simulator/): Kepler’s third law links an orbit’s size to its period: P² = a³ in AU and years. See why planets speed up near the Sun, with diagrams and worked examples.
+- [Star Color, Temperature & Luminosity Explained](https://theastronomylab.com/learn/star-lab/): Why are hot stars blue and cool stars red? Learn Wien’s law and the Stefan–Boltzmann luminosity relation with a visual model and worked examples.
+- [What Is Stellar Parallax? Formula & Diagram](https://theastronomylab.com/learn/stellar-parallax/): Stellar parallax is a nearby star’s apparent shift as Earth orbits the Sun. Learn d = 1/p and the parsec, with a parallax diagram and worked examples.
+- [How to Calculate Telescope Magnification](https://theastronomylab.com/learn/telescope-calculator/): Telescope magnification = telescope focal length ÷ eyepiece focal length. Learn exit pupil, field of view, Dawes’ limit and maximum useful power with examples.
+
+## Reference
+
+- [Astronomy Formulas, Constants & Units](https://theastronomylab.com/formulas/): Astronomy formula sheet: Kepler’s third law, gravity and escape velocity, light travel time, telescope magnification, Schwarzschild radius, parallax and magnitudes.
+- [NASA Picture Library: Search Space Images & Photos](https://theastronomylab.com/library/): Search NASA’s public picture library for planets, galaxies, nebulae and space missions. View photos, read their captions and open the original NASA files.
+- [The 8 Planets: Facts, Sizes & Comparisons](https://theastronomylab.com/planets/): Facts for all eight planets in our solar system — size, gravity, mass, distance from the Sun and year length, from Mercury to Neptune, with NASA images and data.
+- [Planet Size Comparison: All 8 Planets vs Earth](https://theastronomylab.com/planets/compare/): Planet size comparison: all 8 planets to scale and ranked by diameter, each as a percent of Earth’s. Jupiter is 11.2× Earth’s width, Mercury 38.2%.
+- [Earth: Diameter, Size, Mass, Gravity & Distance](https://theastronomylab.com/planets/earth/): Earth is 12,756 km (7,926 mi) wide at the equator, with gravity of 9.8 m/s², a mass of 5.97 × 10²⁴ kg and a mean distance of 149.6 million km from the Sun.
+- [Jupiter: Size, Diameter, Mass, Gravity & Distance](https://theastronomylab.com/planets/jupiter/): Jupiter’s equatorial diameter is 142,984 km (88,846 mi), 11.21× Earth’s. Mass 317.9 Earths, gravity 23.1 m/s², 5.2 AU from the Sun. Full facts table.
+- [Mars: Size, Diameter, Mass, Gravity & Distance](https://theastronomylab.com/planets/mars/): Mars’s equatorial diameter is 6,792 km (4,220 mi), 53.2% of Earth’s. Mass 0.108 Earths, gravity 3.7 m/s², 1.52 AU from the Sun. Full facts table.
+- [Mercury: Size, Diameter, Mass, Gravity & Distance](https://theastronomylab.com/planets/mercury/): Mercury’s equatorial diameter is 4,879 km (3,032 mi), 38.2% of Earth’s. Mass 0.055 Earths, gravity 3.7 m/s², 0.39 AU from the Sun. Full facts table.
+- [Neptune: Size, Diameter, Mass, Gravity & Distance](https://theastronomylab.com/planets/neptune/): Neptune’s equatorial diameter is 49,528 km (30,775 mi), 3.88× Earth’s. Mass 17.1 Earths, gravity 11.0 m/s², 30.18 AU from the Sun. Full facts table.
+- [Saturn: Size, Diameter, Mass, Gravity & Distance](https://theastronomylab.com/planets/saturn/): Saturn’s equatorial diameter is 120,536 km (74,898 mi), 9.45× Earth’s. Mass 95.1 Earths, gravity 9.0 m/s², 9.57 AU from the Sun. Full facts table.
+- [Uranus: Size, Diameter, Mass, Gravity & Distance](https://theastronomylab.com/planets/uranus/): Uranus’s equatorial diameter is 51,118 km (31,763 mi), 4.01× Earth’s. Mass 14.5 Earths, gravity 8.7 m/s², 19.16 AU from the Sun. Full facts table.
+- [Venus: Size, Diameter, Mass, Gravity & Distance](https://theastronomylab.com/planets/venus/): Venus’s equatorial diameter is 12,104 km (7,521 mi), 94.9% of Earth’s. Mass 0.816 Earths, gravity 8.9 m/s², 0.72 AU from the Sun. Full facts table.
+
+## Classroom
+
+- [Astronomy Quiz — Practice Space & Planet Science](https://theastronomylab.com/practice/): Free astronomy quiz: 30 practice questions on planets, Moon phases, orbits, stars, light and telescopes, with instant feedback and clear explanations.
+- [Astronomy Lab for Teachers: Free Simulations & Classroom Activities](https://theastronomylab.com/teachers/): Free astronomy simulations with printable student worksheets, answer keys and NGSS connections. Share any lab to Google Classroom; no logins, works on Chromebooks.
+- [Black Hole Size Worksheet: Free Student Activity](https://theastronomylab.com/labs/black-hole-radius/activity/): Free printable black hole size worksheet for grades 9–12, about 15 minutes with the interactive black hole radius lab. No sign-up; answer key for teachers.
+- [Exoplanet Transit Worksheet: Free Student Activity](https://theastronomylab.com/labs/exoplanet-transit/activity/): Free printable exoplanet transit worksheet for grades 8–12, about 20 minutes with the interactive exoplanet transit lab. No sign-up; answer key for teachers.
+- [Gravity on Other Planets Worksheet: Free Student Activity](https://theastronomylab.com/labs/gravity-calculator/activity/): Free printable gravity on other planets worksheet for grades 7–12, about 20 minutes with the interactive gravity & escape velocity lab. No sign-up; answer key for teachers.
+- [Light Travel Time Worksheet: Free Student Activity](https://theastronomylab.com/labs/light-travel/activity/): Free printable light travel time worksheet for grades 6–9, about 15 minutes with the interactive light travel time lab. No sign-up; answer key for teachers.
+- [Stellar Magnitude Worksheet: Free Student Activity](https://theastronomylab.com/labs/magnitude-comparison/activity/): Free printable stellar magnitude worksheet for grades 9–12, about 15 minutes with the interactive stellar brightness lab. No sign-up; answer key for teachers.
+- [Moon Phases Worksheet: Free Student Activity](https://theastronomylab.com/labs/moon-phases/activity/): Free printable moon phases worksheet for grades 6–8, about 20 minutes with the interactive moon phase explorer lab. No sign-up; answer key for teachers.
+- [Kepler’s Laws Orbit Worksheet: Free Student Activity](https://theastronomylab.com/labs/orbit-simulator/activity/): Free printable kepler’s laws orbit worksheet for grades 8–12, about 25 minutes with the interactive orbit simulator lab. No sign-up; answer key for teachers.
+- [Star Color & Luminosity Worksheet: Free Student Activity](https://theastronomylab.com/labs/star-lab/activity/): Free printable star color & luminosity worksheet for grades 9–12, about 25 minutes with the interactive star color & luminosity lab. No sign-up; answer key for teachers.
+- [Stellar Parallax Worksheet: Free Student Activity](https://theastronomylab.com/labs/stellar-parallax/activity/): Free printable stellar parallax worksheet for grades 9–12, about 15 minutes with the interactive stellar parallax lab. No sign-up; answer key for teachers.
+- [Telescope Magnification Worksheet: Free Student Activity](https://theastronomylab.com/labs/telescope-calculator/activity/): Free printable telescope magnification worksheet for grades 9–12, about 20 minutes with the interactive telescope calculator lab. No sign-up; answer key for teachers.
+
+## About
+
+- [About Astronomy Lab — Sources, Models & Image Credits](https://theastronomylab.com/about/): About The Astronomy Lab: how the free astronomy simulations and calculators work, the NASA data behind the planet guides, model assumptions and image credits.
+- [Privacy Policy](https://theastronomylab.com/privacy/): How The Astronomy Lab handles your data: no accounts, Google Analytics usage statistics, Adsterra ads and cookies, the NASA image search, and how to opt out.
+- Contact: info@theastronomylab.com
+
+## Optional
+
+- [Interactive Periodic Table](https://interactiveperiodictable.net/), [Biology Lab](https://thebiologylab.org/), [Earth Science Lab](https://earthsciencelab.org/), [Geometry Lab](https://geometrylab.net/), [Physics Lab](https://thephysicslab.org/), [KidsCode](https://kidscode.dev/): Sister learning apps from the same makers.
