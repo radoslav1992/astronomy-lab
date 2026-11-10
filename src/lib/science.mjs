@@ -41,6 +41,20 @@ export const EYE=60;
 // (degrees), and the finest detail visible in arcseconds: the telescope's Dawes limit or the eye's limit divided by the magnification,
 // whichever is coarser. `detailKm` is that detail at the target's distance; `elements` is how many such details span the target.
 export function telescopeView(focal,eyepiece,aperture,field,target=0){const t=targets[target];if(!t)throw new Error('Unknown target.');const r=telescope(focal,eyepiece,aperture,field),detail=Math.max(r.resolution,EYE/r.power);return {...r,target:t,size:t.size,fits:r.field/t.size,apparent:t.size*r.power,detail,elements:t.size*3600/detail,detailKm:t.km?t.km*Math.tan(detail/3600*DEG):null};}
+// Days from J2000.0 to noon UT on 2026 January 0. The seasons model uses 2026, a year in the middle of the leap-year cycle.
+const EPOCH=9496,MONTHS=[['January',31],['February',28],['March',31],['April',30],['May',31],['June',30],['July',31],['August',31],['September',30],['October',31],['November',30],['December',31]];
+// The Sun's ecliptic longitude (degrees) and distance (AU) at noon UT on a day of the year (1 = January 1), from the Astronomical
+// Almanac's low-precision formulas, which include Earth's slightly elliptical orbit. Good to about 0.01° for 2026.
+export function sun(day){if(!Number.isFinite(day)||day<1||day>366)throw new Error('Day of year must be between 1 and 366.');const n=day+EPOCH,g=(357.528+.9856003*n)*DEG,L=280.46+.9856474*n+1.915*Math.sin(g)+.02*Math.sin(2*g);return {longitude:((L%360)+360)%360,distance:1.00014-.01671*Math.cos(g)-.00014*Math.cos(2*g)};}
+// Seasons from axial tilt: declination from sin δ = sin(tilt) × sin(longitude), noon altitude 90° − |latitude − δ|, day length from the
+// sunrise equation cos H = −tan(latitude) × tan δ (24 h in polar day, 0 h in polar night; no refraction, Sun treated as a point) and
+// noon sunlight on level ground as a fraction of an overhead Sun. Latitude is in degrees, north positive.
+export function seasons(tilt,day,latitude){if(!Number.isFinite(tilt)||tilt<0||tilt>90)throw new Error('Tilt must be between 0° and 90°.');if(!Number.isFinite(latitude)||Math.abs(latitude)>90)throw new Error('Latitude must be between −90° and 90°.');const {longitude,distance}=sun(day),declination=Math.asin(Math.sin(tilt*DEG)*Math.sin(longitude*DEG))/DEG||0,altitude=90-Math.abs(latitude-declination),x=-Math.tan(latitude*DEG)*Math.tan(declination*DEG),hours=x>=1?0:x<=-1?24:2*Math.acos(x)/DEG/15;return {longitude,distance,declination,altitude,hours,polar:x<=-1?'day':x>=1?'night':'',insolation:Math.max(0,Math.sin(altitude*DEG)),distanceFactor:1/distance**2};}
+// Day of the year (1–365) for a date, and back again. February 29 counts as February 28.
+export function dayOfYear(date){const t=new Date(date);if(!Number.isFinite(t.getTime()))throw new Error('Choose a valid date.');let d=Math.min(t.getUTCDate(),MONTHS[t.getUTCMonth()][1]);for(let m=0;m<t.getUTCMonth();m++)d+=MONTHS[m][1];return d;}
+export function dayLabel(day){if(!Number.isFinite(day))throw new Error('Day must be finite.');let d=Math.min(365,Math.max(1,Math.floor(day)));for(const [name,length] of MONTHS){if(d<=length)return `${name} ${d}`;d-=length;}}
+// Hours as hours and minutes.
+export function hoursLabel(hours){if(!Number.isFinite(hours)||hours<0)throw new Error('Hours must be zero or more.');const t=Math.round(hours*60);return `${Math.floor(t/60)} h ${t%60} min`;}
 export function transit(planetRadius,starRadius,impact){positive(planetRadius);positive(starRadius);if(!Number.isFinite(impact)||impact<0)throw new Error('Impact must be nonnegative.');const k=planetRadius*EARTH_RADIUS/(starRadius*SOLAR_RADIUS);return {ratio:k,depth:overlap(1,k,impact)/Math.PI*100};}
 export function overlap(R,r,d){if(d>=R+r)return 0;if(d<=Math.abs(R-r))return Math.PI*Math.min(R,r)**2;return R*R*Math.acos((d*d+R*R-r*r)/(2*d*R))+r*r*Math.acos((d*d+r*r-R*R)/(2*d*r))-.5*Math.sqrt((-d+R+r)*(d+R-r)*(d-R+r)*(d+R+r));}
 export function parallax(p){positive(p);return {parsecs:1/p,lightyears:3.261563777/p};}
