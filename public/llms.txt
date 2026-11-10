@@ -77,4 +77,4 @@
 
 ## Optional
 
-- [Interactive Periodic Table](https://interactiveperiodictable.net/), [Biology Lab](https://thebiologylab.org/), [Earth Science Lab](https://earthsciencelab.org/), [Geometry Lab](https://geometrylab.net/), [Physics Lab](https://thephysicslab.org/), [KidsCode](https://kidscode.dev/): Sister learning apps from the same makers.
+- [Interactive Periodic Table](https://interactiveperiodictable.net/), [Biology Lab](https://thebiologylab.org/), [Earth Science Lab](https://earthsciencelab.org/), [Geometry Lab](https://geometrylab.net/), [Physics Lab](https://thephysicslab.org/), [KidsCode](https://kidscode.dev/), [Cell by Cell](https://cellbycell.app/): Sister learning apps from the same makers.
