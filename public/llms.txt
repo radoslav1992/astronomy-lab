@@ -4,8 +4,9 @@
 
 ## Tools
 
-- [Astronomy Simulations, Virtual Labs & Calculators](https://theastronomylab.com/labs/): 12 free astronomy simulations, virtual labs and calculators: orbit simulator, Moon phases, seasons, telescope simulator, exoplanet transits, parallax and more.
+- [Astronomy Simulations, Virtual Labs & Calculators](https://theastronomylab.com/labs/): 13 free astronomy simulations, virtual labs and calculators: orbit simulator, Moon phases, seasons, eclipses, telescope simulator, exoplanet transits and more.
 - [Black Hole Event Horizon Simulator](https://theastronomylab.com/labs/black-hole-radius/): Explore a black hole’s event horizon: set a mass and see its Schwarzschild radius and diameter. A 10-solar-mass black hole is about 59 km across.
+- [Eclipse Simulator: Solar and Lunar Eclipses](https://theastronomylab.com/labs/eclipses/): Free eclipse simulator: change the Moon’s distance and position to make total, annular, partial and lunar eclipses, and see why most months have none.
 - [Exoplanet Transit Simulator & Depth Calculator](https://theastronomylab.com/labs/exoplanet-transit/): Free exoplanet transit simulator: watch a planet cross its star and read the dip in the light curve. Transit depth ≈ (Rp/R★)²: about 1% for Jupiter.
 - [Planetary Gravity & Escape Velocity Calculator](https://theastronomylab.com/labs/gravity-calculator/): Calculate surface gravity, your weight and escape velocity on any world from its mass and radius. Earth: 9.8 m/s² and 11.2 km/s; Mars: 3.7 m/s². With formulas.
 - [Light-Years to Years: Light Travel Time Calculator](https://theastronomylab.com/labs/light-travel/): How long does light take to travel 4, 12 or 500 light-years? Convert light-years, AU or km to light travel time. Sunlight reaches Earth in 8 min 19 s.
@@ -20,8 +21,9 @@
 
 ## Lessons
 
-- [Learn Astronomy — Visual Guides & Explanations](https://theastronomylab.com/learn/): Short, visual astronomy guides: Kepler’s laws, Moon phases, seasons, gravity, light travel, star color, telescopes, exoplanet transits, parallax, black holes and magnitudes.
+- [Learn Astronomy — Visual Guides & Explanations](https://theastronomylab.com/learn/): Short, visual astronomy guides: Kepler’s laws, Moon phases, seasons, eclipses, gravity, light travel, star color, telescopes, exoplanet transits, parallax, black holes and magnitudes.
 - [Schwarzschild Radius Calculator & Formula](https://theastronomylab.com/learn/black-hole-radius/): The Schwarzschild radius rₛ = 2GM/c² is the size of a black hole’s event horizon. Calculate it for any mass: Sun 2.95 km, Jupiter 2.82 m, Earth 8.87 mm.
+- [Solar and Lunar Eclipses: Why Not Every Month?](https://theastronomylab.com/learn/eclipses/): Why isn’t there an eclipse every month? The Moon’s orbit is tilted 5.1°. Learn how solar and lunar eclipses work and why some are total and others annular.
 - [Transit Depth Formula & Exoplanet Transits](https://theastronomylab.com/learn/exoplanet-transit/): The transit method finds exoplanets from tiny dips in starlight. Learn the transit depth formula δ ≈ (Rp/R★)², with Jupiter- and Earth-sized examples.
 - [How to Calculate Gravity on Another Planet](https://theastronomylab.com/learn/gravity-calculator/): Surface gravity g = GM/R² explained, plus weight and escape velocity. Worked examples for Earth, the Moon and Mars, and why gas giants have no surface.
 - [How Long Does Light Take to Travel in Space?](https://theastronomylab.com/learn/light-travel/): Light takes 8 min 19 s from the Sun, 1.3 s from the Moon and over 4 years from the nearest star. Learn t = d/c, the light-year and why we see the past.
@@ -51,9 +53,10 @@
 
 ## Classroom
 
-- [Astronomy Quiz — Practice Space & Planet Science](https://theastronomylab.com/practice/): Free astronomy quiz: 34 practice questions on planets, Moon phases, seasons, orbits, stars and telescopes, with instant feedback and explanations.
+- [Astronomy Quiz — Practice Space & Planet Science](https://theastronomylab.com/practice/): Free astronomy quiz: 36 practice questions on planets, Moon phases, seasons, eclipses, orbits, stars and telescopes, with instant feedback and explanations.
 - [Astronomy Lab for Teachers: Free Simulations & Classroom Activities](https://theastronomylab.com/teachers/): Free astronomy simulations with printable student worksheets, answer keys and NGSS connections. Share any lab to Google Classroom; no logins, works on Chromebooks.
 - [Black Hole Size Worksheet: Free Student Activity](https://theastronomylab.com/labs/black-hole-radius/activity/): Free printable black hole size worksheet for grades 9–12, about 15 minutes with the interactive black hole radius lab. No sign-up; answer key for teachers.
+- [Solar and Lunar Eclipse Worksheet: Free Student Activity](https://theastronomylab.com/labs/eclipses/activity/): Free printable solar and lunar eclipse worksheet for grades 6–10, about 25 minutes with the interactive eclipse simulator lab. No sign-up; answer key for teachers.
 - [Exoplanet Transit Worksheet: Free Student Activity](https://theastronomylab.com/labs/exoplanet-transit/activity/): Free printable exoplanet transit worksheet for grades 8–12, about 20 minutes with the interactive exoplanet transit lab. No sign-up; answer key for teachers.
 - [Gravity on Other Planets Worksheet: Free Student Activity](https://theastronomylab.com/labs/gravity-calculator/activity/): Free printable gravity on other planets worksheet for grades 7–12, about 20 minutes with the interactive gravity & escape velocity lab. No sign-up; answer key for teachers.
 - [Light Travel Time Worksheet: Free Student Activity](https://theastronomylab.com/labs/light-travel/activity/): Free printable light travel time worksheet for grades 6–9, about 15 minutes with the interactive light travel time lab. No sign-up; answer key for teachers.
