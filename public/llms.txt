@@ -4,7 +4,7 @@
 
 ## Tools
 
-- [Astronomy Simulations, Virtual Labs & Calculators](https://theastronomylab.com/labs/): Ten free astronomy simulations, virtual labs and calculators: orbit simulator, Moon phases, telescope calculator, exoplanet transits, parallax and more.
+- [Astronomy Simulations, Virtual Labs & Calculators](https://theastronomylab.com/labs/): 11 free astronomy simulations, virtual labs and calculators: orbit simulator, Moon phases, telescope simulator and calculator, exoplanet transits, parallax and more.
 - [Black Hole Event Horizon Simulator](https://theastronomylab.com/labs/black-hole-radius/): Explore a black hole’s event horizon: set a mass and see its Schwarzschild radius and diameter. A 10-solar-mass black hole is about 59 km across.
 - [Exoplanet Transit Simulator & Depth Calculator](https://theastronomylab.com/labs/exoplanet-transit/): Free exoplanet transit simulator: watch a planet cross its star and read the dip in the light curve. Transit depth ≈ (Rp/R★)²: about 1% for Jupiter.
 - [Planetary Gravity & Escape Velocity Calculator](https://theastronomylab.com/labs/gravity-calculator/): Calculate surface gravity, your weight and escape velocity on any world from its mass and radius. Earth: 9.8 m/s² and 11.2 km/s; Mars: 3.7 m/s². With formulas.
@@ -15,6 +15,7 @@
 - [Star Color & Luminosity Calculator](https://theastronomylab.com/labs/star-lab/): See how a star’s temperature and size set its color, peak wavelength (Wien’s law) and luminosity (Stefan–Boltzmann law). The Sun: 5,772 K, peak near 502 nm.
 - [Stellar Parallax Calculator & Diagram](https://theastronomylab.com/labs/stellar-parallax/): What is stellar parallax? Convert a parallax angle to distance with d = 1/p: 0.1″ → 10 parsecs (32.6 light-years). Interactive diagram and worked examples.
 - [Telescope Calculator: Magnification & Exit Pupil](https://theastronomylab.com/labs/telescope-calculator/): Free telescope eyepiece calculator: enter focal lengths and aperture to get magnification, exit pupil, true field of view, Dawes’ limit and focal ratio.
+- [Telescope Simulator: Field of View Calculator](https://theastronomylab.com/labs/telescope-view/): Free telescope simulator and field of view calculator: pick a telescope, eyepiece and target to see the Moon, a planet or a nebula to scale in the view.
 
 ## Lessons
 
@@ -29,6 +30,7 @@
 - [Star Color, Temperature & Luminosity Explained](https://theastronomylab.com/learn/star-lab/): Why are hot stars blue and cool stars red? Learn Wien’s law and the Stefan–Boltzmann luminosity relation with a visual model and worked examples.
 - [What Is Stellar Parallax? Formula & Diagram](https://theastronomylab.com/learn/stellar-parallax/): Stellar parallax is a nearby star’s apparent shift as Earth orbits the Sun. Learn d = 1/p and the parsec, with a parallax diagram and worked examples.
 - [How to Calculate Telescope Magnification](https://theastronomylab.com/learn/telescope-calculator/): Telescope magnification = telescope focal length ÷ eyepiece focal length. Learn exit pupil, field of view, Dawes’ limit and maximum useful power with examples.
+- [Telescope Field of View: True vs Apparent](https://theastronomylab.com/learn/telescope-view/): True field of view = eyepiece apparent field ÷ magnification. Work out what fits in the eyepiece, from the Moon (about 0.5°) to Jupiter (about 47″).
 
 ## Reference
 
@@ -47,7 +49,7 @@
 
 ## Classroom
 
-- [Astronomy Quiz — Practice Space & Planet Science](https://theastronomylab.com/practice/): Free astronomy quiz: 30 practice questions on planets, Moon phases, orbits, stars, light and telescopes, with instant feedback and clear explanations.
+- [Astronomy Quiz — Practice Space & Planet Science](https://theastronomylab.com/practice/): Free astronomy quiz: 32 practice questions on planets, Moon phases, orbits, stars, light and telescopes, with instant feedback and explanations.
 - [Astronomy Lab for Teachers: Free Simulations & Classroom Activities](https://theastronomylab.com/teachers/): Free astronomy simulations with printable student worksheets, answer keys and NGSS connections. Share any lab to Google Classroom; no logins, works on Chromebooks.
 - [Black Hole Size Worksheet: Free Student Activity](https://theastronomylab.com/labs/black-hole-radius/activity/): Free printable black hole size worksheet for grades 9–12, about 15 minutes with the interactive black hole radius lab. No sign-up; answer key for teachers.
 - [Exoplanet Transit Worksheet: Free Student Activity](https://theastronomylab.com/labs/exoplanet-transit/activity/): Free printable exoplanet transit worksheet for grades 8–12, about 20 minutes with the interactive exoplanet transit lab. No sign-up; answer key for teachers.
@@ -59,6 +61,7 @@
 - [Star Color & Luminosity Worksheet: Free Student Activity](https://theastronomylab.com/labs/star-lab/activity/): Free printable star color & luminosity worksheet for grades 9–12, about 25 minutes with the interactive star color & luminosity lab. No sign-up; answer key for teachers.
 - [Stellar Parallax Worksheet: Free Student Activity](https://theastronomylab.com/labs/stellar-parallax/activity/): Free printable stellar parallax worksheet for grades 9–12, about 15 minutes with the interactive stellar parallax lab. No sign-up; answer key for teachers.
 - [Telescope Magnification Worksheet: Free Student Activity](https://theastronomylab.com/labs/telescope-calculator/activity/): Free printable telescope magnification worksheet for grades 9–12, about 20 minutes with the interactive telescope calculator lab. No sign-up; answer key for teachers.
+- [Telescope Field of View Worksheet: Free Student Activity](https://theastronomylab.com/labs/telescope-view/activity/): Free printable telescope field of view worksheet for grades 8–12, about 25 minutes with the interactive telescope view simulator lab. No sign-up; answer key for teachers.
 
 ## About
 

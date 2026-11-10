@@ -29,5 +29,7 @@ export const questions=[
 ['An orbit’s eccentricity is zero. The orbit is…',['A circle','A very long ellipse','A straight line','An escape trajectory'],0,'Zero eccentricity describes a circular orbit. Bound elliptical orbits have eccentricity below one.','Solar system'],
 ['When parallax becomes smaller, inferred distance…',['Becomes smaller','Becomes larger','Stays constant','Becomes negative'],1,'Distance and parallax are inversely related. A small angle corresponds to a large distance.','Stars'],
 ['Why can a cool giant outshine a hot dwarf?',['Cool objects always emit more','Its radiating surface is much larger','Temperature never matters','It reflects more moonlight'],1,'Total luminosity depends on both surface temperature and surface area.','Stars'],
-['Does the black hole lab’s bright ring represent its horizon?',['Yes, exactly','No, it is a schematic accent','It is a solid surface','It shows a planet'],1,'The horizon does not emit escaping light. The illustration is not a predicted black hole image.','Deep space']
+['Does the black hole lab’s bright ring represent its horizon?',['Yes, exactly','No, it is a schematic accent','It is a solid surface','It shows a planet'],1,'The horizon does not emit escaping light. The illustration is not a predicted black hole image.','Deep space'],
+['An eyepiece with a 60° apparent field used at 40× shows a true field of…',['0.67°','1.5°','24°','2,400°'],1,'True field of view ≈ apparent field ÷ magnification = 60° ÷ 40 = 1.5°, almost three Moon-widths.','Observing'],
+['About how wide does the full Moon appear in the sky?',['Half a degree','Five degrees','Ten degrees','Thirty degrees'],0,'The Moon is about 0.5° (31 arcminutes) across, nearly the same apparent size as the Sun.','Observing']
 ];
