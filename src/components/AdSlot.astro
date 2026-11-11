@@ -1,7 +1,7 @@
 ---
 // One Adsterra unit. Space is reserved up front so the page never jumps, and the ad script
 // loads only when the slot nears the viewport on the production hostname.
-// type: 'leaderboard' (728×90 desktop / 320×50 phones), 'rectangle' (300×250) or 'native'.
+// type: 'leaderboard' (728×90 desktop / 320×50 phones) or 'rectangle' (300×250).
 const {type='leaderboard'}=Astro.props;
 ---
 <aside class={`ad-slot ad-${type}`} data-ad={type} aria-label="Advertisement"><span class="ad-label">Advertisement</span><div class="ad-unit"></div></aside>
@@ -10,17 +10,22 @@ import {ads} from '../lib/ads.mjs';
 // Adsterra banner snippets read one global `atOptions`, so banners load strictly one at a time.
 let queue=Promise.resolve();
 const wide=()=>matchMedia('(min-width: 800px)').matches;
+// A unit placed more than once on a page loads its later copies in a frame of their own,
+// so two copies of one snippet never share a document.
+const placed=new Set<string>();
+function framed(key:string,width:number,height:number,settings:string){
+  const frame=document.createElement('iframe');frame.width=String(width);frame.height=String(height);frame.title='Advertisement';frame.setAttribute('scrolling','no');
+  frame.srcdoc=`<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;overflow:hidden}</style></head><body><script>${settings}<\/script><script src="${ads.host}/22/${key}"><\/script></body></html>`;
+  return frame;
+}
 function fill(slot:HTMLElement){
   const box=slot.querySelector('.ad-unit') as HTMLElement;
-  if(slot.dataset.ad==='native'){
-    box.id=`container-${ads.native}`;
-    const script=document.createElement('script');script.async=true;script.dataset.cfasync='false';script.src=`${ads.host}/21/${ads.native}`;
-    box.before(script);
-    return;
-  }
   const [key,width,height]=slot.dataset.ad==='rectangle'?[ads.rectangle,300,250]:wide()?[ads.leaderboard,728,90]:[ads.mobile,320,50];
+  const settings=`atOptions = ${JSON.stringify({key,format:'iframe',height,width,params:{}})};`;
+  if(placed.has(key)){box.append(framed(key,width,height,settings));return;}
+  placed.add(key);
   queue=queue.then(()=>new Promise<void>(resolve=>{
-    const options=document.createElement('script');options.text=`atOptions = ${JSON.stringify({key,format:'iframe',height,width,params:{}})};`;
+    const options=document.createElement('script');options.text=settings;
     const script=document.createElement('script');script.src=`${ads.host}/22/${key}`;
     script.onload=script.onerror=()=>resolve();setTimeout(resolve,8000);
     box.append(options,script);
