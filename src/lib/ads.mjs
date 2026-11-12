@@ -1,9 +1,18 @@
-// Adsterra ad units for theastronomylab.com, copied from the Adsterra publisher dashboard.
-// Ads load only on this hostname, so local and preview builds stay ad-free.
-export const ads={
-  domain:'theastronomylab.com',
-  host:'https://bauval.org',
-  leaderboard:'b1e89f9cd61d8edafe66678de90c10de', // 728×90, wide screens
-  mobile:'a7ccfada266c7f1683de091f83cddd8a', // 320×50, phones
-  rectangle:'55dfb7be51bb43cdb282f0e93bed12e4', // 300×250
+// Adsterra ad units. Ads are switched off: the unit keys are empty, so AdSlot renders nothing (no markup,
+// no script, no requests) and AdFree does not run. The privacy, about and teacher pages say Astronomy Lab has
+// no ads: update them before setting keys again (tests/ads.test.mjs fails as a reminder).
+// Ads load only on `domain`, so local and preview builds stay ad-free.
+export const ads = {
+  domain: 'theastronomylab.com',
+  host: 'https://bauval.org',
+  leaderboard: '', // 728×90, wide screens
+  mobile: '', // 320×50, phones
+  rectangle: '', // 300×250
 };
+
+// The leaderboard needs both its desktop and phone sizes.
+export const adsEnabled = {
+  leaderboard: Boolean(ads.leaderboard && ads.mobile),
+  rectangle: Boolean(ads.rectangle),
+};
+export const anyAds = Object.values(adsEnabled).some(Boolean);

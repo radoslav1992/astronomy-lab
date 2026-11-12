@@ -72,7 +72,7 @@
 ## About
 
 - [About Astronomy Lab — Sources, Models & Image Credits](https://theastronomylab.com/about/): About The Astronomy Lab: how the free astronomy simulations and calculators work, the NASA data behind the planet guides, model assumptions and image credits.
-- [Privacy Policy](https://theastronomylab.com/privacy/): How The Astronomy Lab handles your data: no accounts, Google Analytics usage statistics, Adsterra ads and cookies, the NASA image search, and how to opt out.
+- [Privacy Policy](https://theastronomylab.com/privacy/): How The Astronomy Lab handles your data: no accounts, Google Analytics usage statistics, no ads, the NASA image search, and how to opt out.
 - Contact: info@theastronomylab.com
 
 ## Optional

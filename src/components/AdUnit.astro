@@ -1,0 +1,50 @@
+---
+// One Adsterra unit. Space is reserved up front so the page never jumps, and the ad script
+// loads only when the slot nears the viewport on the production hostname.
+// type: 'leaderboard' (728×90 desktop / 320×50 phones) or 'rectangle' (300×250).
+const {type='leaderboard'}=Astro.props;
+---
+<aside class={`ad-slot ad-${type}`} data-ad={type} aria-label="Advertisement"><span class="ad-label">Advertisement</span><div class="ad-unit"></div></aside>
+<script>
+import {ads} from '../lib/ads.mjs';
+// Adsterra banner snippets read one global `atOptions`, so banners load strictly one at a time.
+let queue=Promise.resolve();
+const wide=()=>matchMedia('(min-width: 800px)').matches;
+// A unit placed more than once on a page loads its later copies in a frame of their own,
+// so two copies of one snippet never share a document.
+const placed=new Set<string>();
+function framed(key:string,width:number,height:number,settings:string){
+  const frame=document.createElement('iframe');frame.width=String(width);frame.height=String(height);frame.title='Advertisement';frame.setAttribute('scrolling','no');
+  frame.srcdoc=`<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;overflow:hidden}</style></head><body><script>${settings}<\/script><script src="${ads.host}/22/${key}"><\/script></body></html>`;
+  return frame;
+}
+function fill(slot:HTMLElement){
+  const box=slot.querySelector('.ad-unit') as HTMLElement;
+  const [key,width,height]=slot.dataset.ad==='rectangle'?[ads.rectangle,300,250]:wide()?[ads.leaderboard,728,90]:[ads.mobile,320,50];
+  const settings=`atOptions = ${JSON.stringify({key,format:'iframe',height,width,params:{}})};`;
+  if(placed.has(key)){box.append(framed(key,width,height,settings));return;}
+  placed.add(key);
+  queue=queue.then(()=>new Promise<void>(resolve=>{
+    const options=document.createElement('script');options.text=settings;
+    const script=document.createElement('script');script.src=`${ads.host}/22/${key}`;
+    script.onload=script.onerror=()=>resolve();setTimeout(resolve,8000);
+    box.append(options,script);
+  }));
+}
+// Visitors from a school platform get no ads (see AdFree.astro).
+const live=(location.hostname===ads.domain||location.hostname===`www.${ads.domain}`)&&!document.documentElement.classList.contains('ad-free');
+const slots=document.querySelectorAll<HTMLElement>('.ad-slot');
+let started=false;
+function start(){
+  if(started)return;started=true;
+  if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(!entry.isIntersecting)return;observer.unobserve(entry.target);fill(entry.target as HTMLElement);}),{rootMargin:'300px 0px'});
+    slots.forEach(slot=>observer.observe(slot));
+  }else slots.forEach(fill);
+}
+// In consent regions ads wait for Accept (see ConsentDefaults.astro / ConsentBanner.astro).
+const consent=document.documentElement.classList;
+if(live&&!consent.contains('consent-pending')&&!consent.contains('consent-denied'))start();
+else if(live)addEventListener('consentchange',event=>{if((event as CustomEvent).detail==='granted')start();});
+</script>
+<style>:global(.ad-free) .ad-slot,:global(.consent-pending) .ad-slot,:global(.consent-denied) .ad-slot{display:none;}</style>
