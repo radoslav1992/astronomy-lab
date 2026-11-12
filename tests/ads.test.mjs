@@ -1,3 +1,3 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {ads} from '../src/lib/ads.mjs';import config from '../astro.config.mjs';
-test('Adsterra unit keys are well-formed and distinct',()=>{const keys=[ads.leaderboard,ads.mobile,ads.rectangle];for(const key of keys)assert.match(key,/^[0-9a-f]{32}$/);assert.equal(new Set(keys).size,keys.length);});
+import test from 'node:test';import assert from 'node:assert/strict';import {ads,adsEnabled,anyAds} from '../src/lib/ads.mjs';import config from '../astro.config.mjs';
+test('Ads are switched off: no unit keys are set and no slot is enabled',()=>{for(const key of [ads.leaderboard,ads.mobile,ads.rectangle])assert.equal(key,'','Ads are off. Before setting keys again, restore the advertising sections of the privacy, about and teacher pages.');assert.deepEqual(adsEnabled,{leaderboard:false,rectangle:false});assert.equal(anyAds,false);});
 test('Ads load over HTTPS and only on the production domain',()=>{assert.equal(new URL(ads.host).protocol,'https:');assert.equal(ads.domain,new URL(config.site).hostname);});
