@@ -21,7 +21,7 @@
 
 ## Lessons
 
-- [Learn Astronomy — Visual Guides & Explanations](https://theastronomylab.com/learn/): Short, visual astronomy guides: Kepler’s laws, Moon phases, seasons, eclipses, gravity, light travel, star color, telescopes, exoplanet transits, parallax, black holes and magnitudes.
+- [Learn Astronomy — Visual Guides & Explanations](https://theastronomylab.com/learn/): Short, visual astronomy guides: Kepler’s laws, Moon phases, seasons, eclipses, gravity, star color, telescopes, exoplanets, parallax and black holes.
 - [Schwarzschild Radius Calculator & Formula](https://theastronomylab.com/learn/black-hole-radius/): The Schwarzschild radius rₛ = 2GM/c² is the size of a black hole’s event horizon. Calculate it for any mass: Sun 2.95 km, Jupiter 2.82 m, Earth 8.87 mm.
 - [Solar and Lunar Eclipses: Why Not Every Month?](https://theastronomylab.com/learn/eclipses/): Why isn’t there an eclipse every month? The Moon’s orbit is tilted 5.1°. Learn how solar and lunar eclipses work and why some are total and others annular.
 - [Transit Depth Formula & Exoplanet Transits](https://theastronomylab.com/learn/exoplanet-transit/): The transit method finds exoplanets from tiny dips in starlight. Learn the transit depth formula δ ≈ (Rp/R★)², with Jupiter- and Earth-sized examples.
@@ -38,9 +38,9 @@
 
 ## Reference
 
-- [Astronomy Formulas, Constants & Units](https://theastronomylab.com/formulas/): Astronomy formula sheet: Kepler’s third law, gravity and escape velocity, light travel time, telescope magnification, Schwarzschild radius, parallax and magnitudes.
+- [Astronomy Formulas, Constants & Units](https://theastronomylab.com/formulas/): Astronomy formula sheet: Kepler’s third law, gravity, escape velocity, light travel time, telescope magnification, Schwarzschild radius, parallax, magnitudes.
 - [NASA Picture Library: Search Space Images & Photos](https://theastronomylab.com/library/): Search NASA’s public picture library for planets, galaxies, nebulae and space missions. View photos, read their captions and open the original NASA files.
-- [The 8 Planets: Facts, Sizes & Comparisons](https://theastronomylab.com/planets/): Facts for all eight planets in our solar system — size, gravity, mass, distance from the Sun and year length, from Mercury to Neptune, with NASA images and data.
+- [The 8 Planets: Facts, Sizes & Comparisons](https://theastronomylab.com/planets/): Facts for all eight planets in our solar system: size, gravity, mass, distance from the Sun and year length, from Mercury to Neptune, with NASA images.
 - [Planet Size Comparison: All 8 Planets vs Earth](https://theastronomylab.com/planets/compare/): Planet size comparison: all 8 planets to scale and ranked by diameter, each as a percent of Earth’s. Jupiter is 11.2× Earth’s width, Mercury 38.2%.
 - [Earth: Diameter, Size, Mass, Gravity & Distance](https://theastronomylab.com/planets/earth/): Earth is 12,756 km (7,926 mi) wide at the equator, with gravity of 9.8 m/s², a mass of 5.97 × 10²⁴ kg and a mean distance of 149.6 million km from the Sun.
 - [Jupiter: Size, Diameter, Mass, Gravity & Distance](https://theastronomylab.com/planets/jupiter/): Jupiter’s equatorial diameter is 142,984 km (88,846 mi), 11.21× Earth’s. Mass 317.9 Earths, gravity 23.1 m/s², 5.2 AU from the Sun. Full facts table.
@@ -53,21 +53,21 @@
 
 ## Classroom
 
-- [Astronomy Quiz — Practice Space & Planet Science](https://theastronomylab.com/practice/): Free astronomy quiz: 36 practice questions on planets, Moon phases, seasons, eclipses, orbits, stars and telescopes, with instant feedback and explanations.
-- [Astronomy Lab for Teachers: Free Simulations & Classroom Activities](https://theastronomylab.com/teachers/): Free astronomy simulations with printable student worksheets, answer keys and NGSS connections. Share any lab to Google Classroom; no logins, works on Chromebooks.
-- [Black Hole Size Worksheet: Free Student Activity](https://theastronomylab.com/labs/black-hole-radius/activity/): Free printable black hole size worksheet for grades 9–12, about 15 minutes with the interactive black hole radius lab. No sign-up; answer key for teachers.
-- [Solar and Lunar Eclipse Worksheet: Free Student Activity](https://theastronomylab.com/labs/eclipses/activity/): Free printable solar and lunar eclipse worksheet for grades 6–10, about 25 minutes with the interactive eclipse simulator lab. No sign-up; answer key for teachers.
-- [Exoplanet Transit Worksheet: Free Student Activity](https://theastronomylab.com/labs/exoplanet-transit/activity/): Free printable exoplanet transit worksheet for grades 8–12, about 20 minutes with the interactive exoplanet transit lab. No sign-up; answer key for teachers.
-- [Gravity on Other Planets Worksheet: Free Student Activity](https://theastronomylab.com/labs/gravity-calculator/activity/): Free printable gravity on other planets worksheet for grades 7–12, about 20 minutes with the interactive gravity & escape velocity lab. No sign-up; answer key for teachers.
-- [Light Travel Time Worksheet: Free Student Activity](https://theastronomylab.com/labs/light-travel/activity/): Free printable light travel time worksheet for grades 6–9, about 15 minutes with the interactive light travel time lab. No sign-up; answer key for teachers.
-- [Stellar Magnitude Worksheet: Free Student Activity](https://theastronomylab.com/labs/magnitude-comparison/activity/): Free printable stellar magnitude worksheet for grades 9–12, about 15 minutes with the interactive stellar brightness lab. No sign-up; answer key for teachers.
-- [Moon Phases Worksheet: Free Student Activity](https://theastronomylab.com/labs/moon-phases/activity/): Free printable moon phases worksheet for grades 6–8, about 20 minutes with the interactive moon phase explorer lab. No sign-up; answer key for teachers.
-- [Kepler’s Laws Orbit Worksheet: Free Student Activity](https://theastronomylab.com/labs/orbit-simulator/activity/): Free printable kepler’s laws orbit worksheet for grades 8–12, about 25 minutes with the interactive orbit simulator lab. No sign-up; answer key for teachers.
-- [Reasons for the Seasons Worksheet: Free Student Activity](https://theastronomylab.com/labs/seasons/activity/): Free printable reasons for the seasons worksheet for grades 6–9, about 25 minutes with the interactive seasons simulator lab. No sign-up; answer key for teachers.
-- [Star Color & Luminosity Worksheet: Free Student Activity](https://theastronomylab.com/labs/star-lab/activity/): Free printable star color & luminosity worksheet for grades 9–12, about 25 minutes with the interactive star color & luminosity lab. No sign-up; answer key for teachers.
-- [Stellar Parallax Worksheet: Free Student Activity](https://theastronomylab.com/labs/stellar-parallax/activity/): Free printable stellar parallax worksheet for grades 9–12, about 15 minutes with the interactive stellar parallax lab. No sign-up; answer key for teachers.
-- [Telescope Magnification Worksheet: Free Student Activity](https://theastronomylab.com/labs/telescope-calculator/activity/): Free printable telescope magnification worksheet for grades 9–12, about 20 minutes with the interactive telescope calculator lab. No sign-up; answer key for teachers.
-- [Telescope Field of View Worksheet: Free Student Activity](https://theastronomylab.com/labs/telescope-view/activity/): Free printable telescope field of view worksheet for grades 8–12, about 25 minutes with the interactive telescope view simulator lab. No sign-up; answer key for teachers.
+- [Astronomy Quiz: Practice Space & Planet Science](https://theastronomylab.com/practice/): Free astronomy quiz: 36 practice questions on planets, Moon phases, seasons, eclipses, orbits, stars and telescopes, with instant feedback and explanations.
+- [Astronomy Lab for Teachers: Free Simulations & Activities](https://theastronomylab.com/teachers/): Free astronomy simulations with printable worksheets, answer keys and NGSS connections. Share any lab to Google Classroom; no logins, works on Chromebooks.
+- [Black Hole Size Worksheet: Free Student Activity](https://theastronomylab.com/labs/black-hole-radius/activity/): Free printable black hole size worksheet for grades 9–12, about 15 minutes with the interactive black hole radius lab. Answer key for teachers.
+- [Solar and Lunar Eclipse Worksheet: Free Student Activity](https://theastronomylab.com/labs/eclipses/activity/): Free printable solar and lunar eclipse worksheet for grades 6–10, about 25 minutes with the interactive eclipse simulator lab. Answer key for teachers.
+- [Exoplanet Transit Worksheet: Free Student Activity](https://theastronomylab.com/labs/exoplanet-transit/activity/): Free printable exoplanet transit worksheet for grades 8–12, about 20 minutes with the interactive exoplanet transit lab. Answer key for teachers.
+- [Gravity on Other Planets Worksheet: Free Student Activity](https://theastronomylab.com/labs/gravity-calculator/activity/): Free printable gravity on other planets worksheet for grades 7–12, about 20 minutes with the interactive gravity & escape velocity lab. Answer key for teachers.
+- [Light Travel Time Worksheet: Free Student Activity](https://theastronomylab.com/labs/light-travel/activity/): Free printable light travel time worksheet for grades 6–9, about 15 minutes with the interactive light travel time lab. Answer key for teachers.
+- [Stellar Magnitude Worksheet: Free Student Activity](https://theastronomylab.com/labs/magnitude-comparison/activity/): Free printable stellar magnitude worksheet for grades 9–12, about 15 minutes with the interactive stellar brightness lab. Answer key for teachers.
+- [Moon Phases Worksheet: Free Student Activity](https://theastronomylab.com/labs/moon-phases/activity/): Free printable moon phases worksheet for grades 6–8, about 20 minutes with the interactive moon phase explorer lab. Answer key for teachers.
+- [Kepler’s Laws Orbit Worksheet: Free Student Activity](https://theastronomylab.com/labs/orbit-simulator/activity/): Free printable kepler’s laws orbit worksheet for grades 8–12, about 25 minutes with the interactive orbit simulator lab. Answer key for teachers.
+- [Reasons for the Seasons Worksheet: Free Student Activity](https://theastronomylab.com/labs/seasons/activity/): Free printable reasons for the seasons worksheet for grades 6–9, about 25 minutes with the interactive seasons simulator lab. Answer key for teachers.
+- [Star Color & Luminosity Worksheet: Free Student Activity](https://theastronomylab.com/labs/star-lab/activity/): Free printable star color & luminosity worksheet for grades 9–12, about 25 minutes with the interactive star color & luminosity lab. Answer key for teachers.
+- [Stellar Parallax Worksheet: Free Student Activity](https://theastronomylab.com/labs/stellar-parallax/activity/): Free printable stellar parallax worksheet for grades 9–12, about 15 minutes with the interactive stellar parallax lab. Answer key for teachers.
+- [Telescope Magnification Worksheet: Free Student Activity](https://theastronomylab.com/labs/telescope-calculator/activity/): Free printable telescope magnification worksheet for grades 9–12, about 20 minutes with the interactive telescope calculator lab. Answer key for teachers.
+- [Telescope Field of View Worksheet: Free Student Activity](https://theastronomylab.com/labs/telescope-view/activity/): Free printable telescope field of view worksheet for grades 8–12, about 25 minutes with the interactive telescope view simulator lab. Answer key for teachers.
 
 ## About
 
