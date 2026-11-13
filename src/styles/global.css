@@ -11,3 +11,5 @@
 
 :root{--consent-bg:#0d1728;--consent-fg:#eef3f9;--consent-line:#2c3e53;--consent-accent:#a2e3f5;--consent-accent-fg:#071322}.footer-link-button{all:unset;cursor:pointer;color:inherit}.footer-link-button:hover{color:var(--cyan)}.footer-link-button:focus-visible{outline:3px solid var(--cyan);outline-offset:5px}
 .footer-bottom div{flex-wrap:wrap;row-gap:10px}.footer-bottom div a,.footer-bottom div button{white-space:nowrap}
+
+.quiz-notes{max-width:820px}.quiz-notes h2{margin-top:34px}.quiz-notes h2:first-child{margin-top:0}.quiz-notes p{color:var(--muted);line-height:1.65}.quiz-samples{padding-left:22px;display:grid;gap:14px;margin:14px 0 22px}.quiz-samples h3{font-size:1.05rem;margin:0 0 4px}.quiz-samples p{margin:0}.quiz-samples strong{color:var(--text)}
